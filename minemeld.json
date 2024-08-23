@@ -1,0 +1,19 @@
+{
+    "version": "0.3",
+    "name": "microsoft_sentinel_ti_uploadapi",
+    "author": "the_owl",
+    "author_email": "",
+    "description": "MineMeld Nodes for Microsoft Sentinel Threat Intell Upload API",
+    "entry_points": {
+        "minemeld_nodes": {
+            "microsoft_sentinel_ti_uploadapi.Output": "microsoft_sentinel_ti_uploadapi.node:Output"
+        },
+        "minemeld_prototypes": {
+            "microsoft_sentinel_ti_uploadapi.prototypes": "microsoft_sentinel_ti_uploadapi:prototypes"
+        },
+        "minemeld_webui": {
+            "microsoftGSAWebui": "microsoft_sentinel_ti_uploadapi:webui_blueprint"
+        }
+    },
+    "manifest_version": 0
+}
