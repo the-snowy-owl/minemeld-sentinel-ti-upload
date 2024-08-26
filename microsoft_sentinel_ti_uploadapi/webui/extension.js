@@ -186,7 +186,7 @@ function MSFTSTIUSideConfigController($scope, MinemeldConfigService, MineMeldRun
         });
     };
 
-   vm.setClientID = function() {
+   vm.setWorkspaceID = function() {
         var mi = $modal.open({
             templateUrl: '/extensions/webui/microsoftTIUWebui/stiu.output.wid.modal.html',
             controller: ['$modalInstance', MSFTSTIUClientIDController],
@@ -197,7 +197,7 @@ function MSFTSTIUSideConfigController($scope, MinemeldConfigService, MineMeldRun
         });
 
         mi.result.then((result) => {
-            vm.client_id = result.client_id;
+            vm.workspace_id = result.workspace_id;
 
             return vm.saveSideConfig().then((result) => {
                 toastr.success('WORKSPACE ID SET');
