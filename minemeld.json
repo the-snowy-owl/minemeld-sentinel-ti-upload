@@ -1,6 +1,6 @@
 {
-    "version": "0.2",
-    "name": "microsoft_sentinel_ti_uploadapi",
+    "version": "0.3",
+    "name": "minemeld-mssentinel-tiuploadapi",
     "author": "the_owl",
     "author_email": "hoot@hoot.com",
     "description": "MineMeld Nodes for Microsoft Sentinel Threat Intel Upload API",

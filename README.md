@@ -1,4 +1,4 @@
-# minemeld-msgraph-secapi
+# minemeld-mssentinel-tiuploadapi
 
 Minemeld nodes for Microsoft Graph Security API
 
