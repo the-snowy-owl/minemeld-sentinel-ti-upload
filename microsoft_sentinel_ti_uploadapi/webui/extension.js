@@ -2,7 +2,7 @@ console.log('Loading Microsoft Sentinel Threat Intel Upload API Output WebUI');
 
 (function() {
 
-function MSFTISGSideConfigController($scope, MinemeldConfigService, MineMeldRunningConfigStatusService,
+function MSFTSTIUSideConfigController($scope, MinemeldConfigService, MineMeldRunningConfigStatusService,
                                        toastr, $modal, ConfirmService, $timeout) {
     var vm = this;
 
@@ -102,8 +102,8 @@ function MSFTISGSideConfigController($scope, MinemeldConfigService, MineMeldRunn
 
     vm.setClientID = function() {
         var mi = $modal.open({
-            templateUrl: '/extensions/webui/microsoftTIUWebui/isg.output.scid.modal.html',
-            controller: ['$modalInstance', MSFTISGClientIDController],
+            templateUrl: '/extensions/webui/microsoftTIUWebui/stiu.output.scid.modal.html',
+            controller: ['$modalInstance', MSFTSTIUClientIDController],
             controllerAs: 'vm',
             bindToController: true,
             backdrop: 'static',
@@ -123,8 +123,8 @@ function MSFTISGSideConfigController($scope, MinemeldConfigService, MineMeldRunn
     };
     vm.setClientSecret = function() {
         var mi = $modal.open({
-            templateUrl: '/extensions/webui/microsoftTIUWebui/isg.output.scs.modal.html',
-            controller: ['$modalInstance', MSFTISGClientSecretController],
+            templateUrl: '/extensions/webui/microsoftTIUWebui/stiu.output.scs.modal.html',
+            controller: ['$modalInstance', MSFTSTIUClientSecretController],
             controllerAs: 'vm',
             bindToController: true,
             backdrop: 'static',
@@ -144,8 +144,8 @@ function MSFTISGSideConfigController($scope, MinemeldConfigService, MineMeldRunn
     };
     vm.setTenantID = function() {
         var mi = $modal.open({
-            templateUrl: '/extensions/webui/microsoftTIUWebui/isg.output.stid.modal.html',
-            controller: ['$modalInstance', MSFTISGTenantIDController],
+            templateUrl: '/extensions/webui/microsoftTIUWebui/stiu.output.stid.modal.html',
+            controller: ['$modalInstance', MSFTSTIUTenantIDController],
             controllerAs: 'vm',
             bindToController: true,
             backdrop: 'static',
@@ -166,8 +166,8 @@ function MSFTISGSideConfigController($scope, MinemeldConfigService, MineMeldRunn
 
     vm.setTargetProduct = function() {
         var mi = $modal.open({
-            templateUrl: '/extensions/webui/microsoftTIUWebui/isg.output.stp.modal.html',
-            controller: ['$modalInstance', MSFTISGTargetProductController],
+            templateUrl: '/extensions/webui/microsoftTIUWebui/stiu.output.stp.modal.html',
+            controller: ['$modalInstance', MSFTSTIUTargetProductController],
             controllerAs: 'vm',
             bindToController: true,
             backdrop: 'static',
@@ -188,8 +188,8 @@ function MSFTISGSideConfigController($scope, MinemeldConfigService, MineMeldRunn
 
    vm.setClientID = function() {
         var mi = $modal.open({
-            templateUrl: '/extensions/webui/microsoftTIUWebui/isg.output.wid.modal.html',
-            controller: ['$modalInstance', MSFTISGClientIDController],
+            templateUrl: '/extensions/webui/microsoftTIUWebui/stiu.output.wid.modal.html',
+            controller: ['$modalInstance', MSFTSTIUClientIDController],
             controllerAs: 'vm',
             bindToController: true,
             backdrop: 'static',
@@ -210,8 +210,8 @@ function MSFTISGSideConfigController($scope, MinemeldConfigService, MineMeldRunn
 
     vm.setRecommendedAction = function() {
         var mi = $modal.open({
-            templateUrl: '/extensions/webui/microsoftTIUWebui/isg.output.sra.modal.html',
-            controller: ['$modalInstance', MSFTISGRecommendedActionController],
+            templateUrl: '/extensions/webui/microsoftTIUWebui/stiu.output.sra.modal.html',
+            controller: ['$modalInstance', MSFTSTIURecommendedActionController],
             controllerAs: 'vm',
             bindToController: true,
             backdrop: 'static',
@@ -233,7 +233,7 @@ function MSFTISGSideConfigController($scope, MinemeldConfigService, MineMeldRunn
     vm.loadSideConfig();
 }
 
-function MSFTISGClientSecretController($modalInstance) {
+function MSFTSTIUClientSecretController($modalInstance) {
     var vm = this;
 
     vm.client_secret = undefined;
@@ -269,7 +269,7 @@ function MSFTISGClientSecretController($modalInstance) {
     }
 }
 
-function MSFTISGClientIDController($modalInstance) {
+function MSFTSTIUClientIDController($modalInstance) {
     var vm = this;
 
     vm.client_id = undefined;
@@ -295,7 +295,7 @@ function MSFTISGClientIDController($modalInstance) {
     }
 }
 
-function MSFTISGTenantIDController($modalInstance) {
+function MSFTSTIUTenantIDController($modalInstance) {
     var vm = this;
 
     vm.tenant_id = undefined;
@@ -321,7 +321,7 @@ function MSFTISGTenantIDController($modalInstance) {
     }
 }
 
-function MSFTISGWorkspaceIDController($modalInstance) {
+function MSFTSTIUWorkspaceIDController($modalInstance) {
     var vm = this;
 
     vm.workspace_id = undefined;
@@ -347,7 +347,7 @@ function MSFTISGWorkspaceIDController($modalInstance) {
     }
 }
 
-function MSFTISGTargetProductController($modalInstance) {
+function MSFTSTIUTargetProductController($modalInstance) {
     var vm = this;
 
     vm.availableTargetProducts = ['Azure Sentinel'];
@@ -374,7 +374,7 @@ function MSFTISGTargetProductController($modalInstance) {
     }
 }
 
-function MSFTISGRecommendedActionController($modalInstance) {
+function MSFTSTIURecommendedActionController($modalInstance) {
     var vm = this;
 
     vm.availableActions = ['Alert', 'Allow', 'Block', 'Unknown'];
@@ -401,14 +401,14 @@ function MSFTISGRecommendedActionController($modalInstance) {
 }
 
 angular.module('microsoftTIUWebui', [])
-    .controller('MSFTISGSideConfigController', [
+    .controller('MSFTSTIUSideConfigController', [
         '$scope', 'MinemeldConfigService', 'MineMeldRunningConfigStatusService',
         'toastr', '$modal', 'ConfirmService', '$timeout',
-        MSFTISGSideConfigController
+        MSFTSTIUSideConfigController
     ])
     .config(['$stateProvider', function($stateProvider) {
-        $stateProvider.state('nodedetail.msftisgoutputinfo', {
-            templateUrl: '/extensions/webui/microsoftTIUWebui/isg.output.info.html',
+        $stateProvider.state('nodedetail.msftstiuoutputinfo', {
+            templateUrl: '/extensions/webui/microsoftTIUWebui/stiu.output.info.html',
             controller: 'NodeDetailInfoController',
             controllerAs: 'vm'
         });
@@ -418,7 +418,7 @@ angular.module('microsoftTIUWebui', [])
             tabs: [{
                 icon: 'fa fa-circle-o',
                 tooltip: 'INFO',
-                state: 'nodedetail.msftisgoutputinfo',
+                state: 'nodedetail.msftSTIUoutputinfo',
                 active: false
             },
             {
