@@ -206,9 +206,8 @@ class Output(ActorBaseFT):
             LOG.debug('Successfully submitted intel. No errors returned in response.')
         else:
             for e in result['errors']:
-            
-            LOG.debug('Indicators Submitted: {} '.format(indicators))
-            LOG.debut('Indicator number {} failed: {} '.format(e['recordIndex'],e['errorMessages']))
+                LOG.debug('Indicators Submitted: {} '.format(indicators))
+                LOG.debut('Indicator number {} failed: {} '.format(e['recordIndex'],e['errorMessages']))
 
 
     def _push_loop(self):
