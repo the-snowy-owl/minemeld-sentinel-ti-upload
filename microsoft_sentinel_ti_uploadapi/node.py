@@ -29,8 +29,7 @@ ENDPOINT_VERSION='beta'
 
 ENDPOINT_URL1 = 'https://sentinelus.azure-api.net/'
 ENDPOINT_URL2 = '/threatintelligence:upload-indicators?api-version=2022-07-01'
-ENDPOINT_SUBMITBATCH=ENDPOINT_URL+'/submitTiIndicators'
-ENDPOINT_DELETEBATCH=ENDPOINT_URL+'/deleteTiIndicatorsByExternalId'
+
 USER_AGENT= 'PaloAltoNetworks-MineMeld/{}'.format(__version__)
 # Maximum number of batch upload
 MAX_BATCH_SIZE=50
