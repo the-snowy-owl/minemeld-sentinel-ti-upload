@@ -1,0 +1,19 @@
+url: https://www.microsoft.com/en-us/security/operations/intelligence
+description: >
+  Nodes for Microsoft Sentinel's Threat Intelligence Upload Indicators API
+
+prototypes:
+  output:
+    author: theowl
+    class: microsoft_sentinel_ti_uploadapi.Output
+    development_status: EXPERIMENTAL
+    node_type: output
+    indicator_types:
+      - URL
+      - IPv4
+      - domain
+    tags:
+      - extension
+    description: >
+      Output node for Microsoft Sentinel's Threat Intelligence Upload Indicators API
+    config: {}
