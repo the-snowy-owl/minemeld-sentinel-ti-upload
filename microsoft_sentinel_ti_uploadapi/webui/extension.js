@@ -90,7 +90,7 @@ function MSFTSTIUSideConfigController($scope, MinemeldConfigService, MineMeldRun
             side_config.target_product = vm.target_product;
         }
 		if (vm.workspace_id) {
-			side_config.workspace_id = vm.workspace_id;
+            side_config.workspace_id = vm.workspace_id;
 		}
 
         return MinemeldConfigService.saveDataFile(
