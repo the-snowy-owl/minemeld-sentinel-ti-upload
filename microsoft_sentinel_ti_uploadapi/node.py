@@ -77,7 +77,7 @@ class Output(ActorBaseFT):
         self.client_secret = self.config.get('client_secret', None)
         self.tenant_id = self.config.get('tenant_id', None)
         
-        self.workspace_id = self.config.get('workspace_id',None)
+        self.workspace_id = self.config.get('workspace_id', None)
 
         self.recommended_action = self.config.get('recommended_action', 3)
         self.target_product = self.config.get('target_product', None)
